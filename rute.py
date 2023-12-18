@@ -19,8 +19,7 @@ def main():
             del point[2]
             halte.append({"location":point,"popup": geo["properties"]["name"]})
         elif types == "LineString":
-            coordinate = geo["geometry"]["coordinates"]
-            print("DAMN")
+            coordinate = geo["geometry"]["coordinates"]    
             for c in coordinate:
                 c[0], c[1] = c[1], c[0]
                 del c[2]
